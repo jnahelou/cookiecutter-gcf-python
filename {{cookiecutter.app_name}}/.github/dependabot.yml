@@ -1,0 +1,11 @@
+version: 2
+updates:
+  - package-ecosystem: pip
+    directory: "{{cookiecutter.app_name}}/"
+    schedule:
+      interval: weekly
+      time: "09:00"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "feat"
+      include: "scope"
