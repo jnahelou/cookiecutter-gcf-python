@@ -1,0 +1,9 @@
+{
+    "app_name": "hello-function",
+    "app_display_name": "Hello Function",
+    "project_short_description": "Simple hello function running on Google Cloud App Engine.",
+    "use_pytest": "y",
+    "use_pylint": "y",
+    "use_git": "y",
+    "use_github_actions": "y"
+}

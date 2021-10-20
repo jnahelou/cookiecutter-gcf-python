@@ -1,0 +1,16 @@
+README.md
+DOCS.md
+requirements-dev.txt
+test_*
+
+
+# Python pycache:
+__pycache__/
+*.pyc
+# Ignored by the build system
+venv
+tests
+htmlcov
+.pytest_cache
+.pylintrc
+.editorconfig

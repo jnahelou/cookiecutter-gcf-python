@@ -1,0 +1,8 @@
+[MESSAGES CONTROL]
+disable=too-few-public-methods
+
+[MASTER]
+extension-pkg-whitelist=pydantic
+
+[FORMAT]
+max-line-length=120

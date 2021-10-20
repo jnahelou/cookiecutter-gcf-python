@@ -1,0 +1,32 @@
+# EditorConfig is awesome: https://EditorConfig.org
+
+# Active EditorConfig file
+root = true
+
+# ALL
+[*]
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+charset = utf-8
+max_line_length = 120
+#indent_style = space
+#indent_size = 2
+
+# 4 space indentation
+# Python, Jinja
+[*.{py,jinja,j2}]
+indent_style = space
+indent_size = 4
+
+# 2 space indentation
+# Ruby, Yaml
+[*.{rb,yaml, yml}]
+indent_style = space
+indent_size = 2
+
+# 2 tab indentation
+# Makefile
+[Makefile]
+indent_style = tab
+indent_size = 4
