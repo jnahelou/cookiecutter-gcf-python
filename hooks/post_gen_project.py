@@ -18,9 +18,10 @@ def init_git():
     Initialises git on the new project folder
     """
     GIT_COMMANDS = [
-        ["git", "init", "--initial-branch=main"],
+        ["git", "init"],
         ["git", "add", "."],
-        ["git", "commit", "-a", "-m", ":cookie: Initial Commit :rocket:"]
+        ["git", "commit", "-a", "-m", ":cookie: Initial Commit :rocket:"],
+        ["git", "branch", "-m", "master", "main"]
     ]
 
     for command in GIT_COMMANDS:
