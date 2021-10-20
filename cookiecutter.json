@@ -5,5 +5,6 @@
     "use_pytest": "y",
     "use_pylint": "y",
     "use_git": "y",
-    "use_github_actions": "y"
+    "use_github_actions": "y",
+    "use_monitoring": ["datadog", "operation", "none"]
 }
