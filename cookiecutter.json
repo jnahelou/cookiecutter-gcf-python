@@ -1,6 +1,6 @@
 {
-    "app_name": "hello-function",
-    "app_display_name": "Hello Function",
+    "project_name": "Hello Function",
+    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
     "project_short_description": "Simple hello function running on Google Cloud App Engine.",
     "use_pytest": "y",
     "use_pylint": "y",

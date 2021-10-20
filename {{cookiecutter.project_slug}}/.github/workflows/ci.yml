@@ -21,16 +21,16 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r {{cookiecutter.app_name}}/requirements-dev.txt
+          pip install -r {{cookiecutter.project_slug}}/requirements-dev.txt
 
       {%- if cookiecutter.use_pylint == "y" %}
       - name: Analysing the code with pylint
         run: |
-          pylint -v --rcfile={{cookiecutter.app_name}}/.pylintrc {{cookiecutter.app_name}}/*.py
+          pylint -v --rcfile={{cookiecutter.project_slug}}/.pylintrc {{cookiecutter.project_slug}}/*.py
       {%- endif %}
 
       {%- if cookiecutter.use_pytest == "y" %}
       - name: Analysing the code with pytest
         run: |
-          pytest -vv {{cookiecutter.app_name}}
+          pytest -vv {{cookiecutter.project_slug}}
       {%- endif %}

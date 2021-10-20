@@ -36,10 +36,10 @@ create_pylint = '{{cookiecutter.use_pylint}}' == 'y'
 create_github_actions = '{{cookiecutter.use_github_actions}}' == 'y'
 
 if not create_pytest:
-    remove('{{cookiecutter.app_name}}/test_main.py')
+    remove('{{cookiecutter.project_slug}}/test_main.py')
 
 if not create_pylint:
-    remove('{{cookiecutter.app_name}}/.pylintrc')
+    remove('{{cookiecutter.project_slug}}/.pylintrc')
 
 if not create_github_actions:
     remove('.github')

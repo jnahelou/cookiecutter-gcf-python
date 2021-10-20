@@ -4,9 +4,9 @@ provider "datadog" {
 }
 
 resource "datadog_monitor" "alert-slack" {
-  name           = "{{cookiecutter.app_display_name}} function errored"
+  name           = "{{cookiecutter.project_name}} function errored"
   type           = "metric alert"
-  message        = "{{cookiecutter.app_display_name}} completion in error !"
+  message        = "{{cookiecutter.project_name}} completion in error !"
   query          = "sum(last_5m):sum:gcp.cloudfunctions.function.execution_count{function_name:${var.function_name},status:error,project_id:${var.project_id}}.as_count() > 0"
   timeout_h      = 1
   notify_no_data = false
@@ -21,7 +21,7 @@ resource "datadog_monitor" "alert-slack" {
 {%- endif %}
 {%- if cookiecutter.use_monitoring == "operation" %}
 resource "google_monitoring_alert_policy" "alert_policy" {
-  display_name = "{{cookiecutter.app_display_name}} function errored"
+  display_name = "{{cookiecutter.project_name}} function errored"
 	combiner     = "AND"
   conditions {
     display_name = "completion failed"

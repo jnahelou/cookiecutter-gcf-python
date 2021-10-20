@@ -1,7 +1,7 @@
 version: 2
 updates:
   - package-ecosystem: pip
-    directory: "{{cookiecutter.app_name}}/"
+    directory: "{{cookiecutter.project_slug}}/"
     schedule:
       interval: weekly
       time: "09:00"

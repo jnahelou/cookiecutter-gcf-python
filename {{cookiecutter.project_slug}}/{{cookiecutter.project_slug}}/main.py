@@ -1,5 +1,5 @@
 """
-{{cookiecutter.app_display_name}}
+{{cookiecutter.project_name}}
 """
 
 import logging
@@ -22,8 +22,8 @@ def main(request):
     Main handler used by gcf
     """
 
-    logging.info("Running GCF {{cookiecutter.app_display_name}}")
-    return do_some_stuff("{{cookiecutter.app_display_name}}")
+    logging.info("Running GCF {{cookiecutter.project_name}}")
+    return do_some_stuff("{{cookiecutter.project_name}}")
 
 if __name__ == "__main__":
     main(None)

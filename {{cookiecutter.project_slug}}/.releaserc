@@ -1,6 +1,6 @@
 {
   "tagFormat": "${version}",
-  "repositoryUrl": "https://github.com/jnahelou/{{cookiecutter.app_name}}.git",
+  "repositoryUrl": "https://github.com/jnahelou/{{cookiecutter.project_slug}}.git",
   "plugins": [
 	 "@semantic-release/commit-analyzer",
 	 "@semantic-release/release-notes-generator",

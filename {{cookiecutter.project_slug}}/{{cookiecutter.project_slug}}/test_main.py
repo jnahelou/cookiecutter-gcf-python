@@ -1,5 +1,5 @@
 """
-Test {{cookiecutter.app_display_name}}
+Test {{cookiecutter.project_name}}
 """
 
 import main
@@ -9,7 +9,7 @@ def test_main():
     Test main function
     """
 
-    assert main.main(None) == "{{cookiecutter.app_display_name|lower}}"
+    assert main.main(None) == "{{cookiecutter.project_name|lower}}"
 
 def test_do_some_stuff():
     """
