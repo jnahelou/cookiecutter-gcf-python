@@ -21,6 +21,8 @@ Optional Integrations
 
 - Local git repository initialization
 - Github action configuration
+	- CI
+	- Release
 - Dummy pytest with mocked functions
 - Pylint
 

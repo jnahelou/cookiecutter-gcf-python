@@ -1,0 +1,30 @@
+---
+name: Release 
+
+on:
+  # Only manually
+  workflow_dispatch:
+
+jobs:
+  release:
+    name: "Release"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2.3.4
+
+      - name: Semantic Release
+        uses: cycjimmy/semantic-release-action@v2
+        with:
+          semantic_version: 17.3.7
+          extra_plugins: |
+            @semantic-release/commit-analyzer@8.0.1
+            @semantic-release/release-notes-generator@9.0.1
+            @semantic-release/changelog@5.0.1
+            @semantic-release/github@7.2.0
+            @semantic-release/exec@5.0.0
+            @semantic-release/git@9.0.0
+        env:
+          {%- raw %}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          {%- endraw %}
